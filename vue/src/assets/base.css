@@ -1,0 +1,30 @@
+body {
+  min-height: 100vh;
+  color: #fff;
+  background: #56519d;
+  transition: color 0.5s, background-color 0.5s;
+  line-height: 1.6;
+  font-size: 15px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: museo-sans, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+em {
+  font-family: museo-sans, sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+h1 {
+  font-family: museo-sans-rounded, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+h1 em {
+  font-style: italic;
+}
