@@ -1,23 +1,23 @@
-<script setup lang="ts">
-import { RouterLink, RouterView } from "vue-router";
-import HelloWorld from "@/components/HelloWorld.vue";
+<script lang="ts">
+export default {
+  name: "App",
+  components: {},
+  data: () => ({ value: 1234 }),
+  copmuted: {
+    bef() {
+      return 33;
+    },
+  },
+};
 </script>
 
 <template>
   <header>
     <img alt="Klapske" class="logo" src="@/assets/logo.svg" />
-
-    <div class="wrapper">
-      <HelloWorld msg="Amai... ik krijg nog geld van u!" />
-
-      <nav>
-        <RouterLink class="button" to="/">Nu</RouterLink>
-        <RouterLink class="button" to="/about">Sewwes</RouterLink>
-      </nav>
-    </div>
   </header>
-
-  <RouterView />
+  <div class="wrapper">
+    <RouterView />
+  </div>
 </template>
 
 <style>
@@ -27,15 +27,7 @@ import HelloWorld from "@/components/HelloWorld.vue";
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
-
   font-weight: normal;
-}
-
-.button {
-  border-radius: 2rem;
-  padding: 1rem;
-  font-weight: bold;
-  background-color: white;
 }
 
 .logo {
@@ -87,12 +79,6 @@ nav a:first-of-type {
     place-items: center;
   }
 
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
-  }
-
   header {
     display: flex;
     place-items: center;
@@ -104,10 +90,6 @@ nav a:first-of-type {
     flex-wrap: wrap;
   }
 
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
   nav {
     text-align: left;
     margin-left: -1rem;
@@ -116,5 +98,10 @@ nav a:first-of-type {
     padding: 1rem 0;
     margin-top: 1rem;
   }
+}
+
+.logo {
+  margin: 0 auto;
+  max-width: 20rem;
 }
 </style>

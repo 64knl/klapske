@@ -13,6 +13,12 @@ body {
   font-style: normal;
 }
 
+
+input {
+  font-family: museo-sans, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
 em {
   font-family: museo-sans, sans-serif;
   font-weight: 300;
@@ -27,4 +33,23 @@ h1 {
 
 h1 em {
   font-style: italic;
+}
+
+.euro {
+  padding: .2rem .3rem;
+  padding: .5rem;
+  line-height: 4rem;
+  font-size: 3rem;
+  border-radius: .5rem;
+  border: none;
+  max-width: 20rem;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: right;
+  display: block;
+  margin: 0 auto;
+}
+
+.goodbutton {
+  background-color: aqua;
 }

@@ -1,11 +1,7 @@
-<script setup lang="ts">
-import DocumentationIcon from "./icons/IconDocumentation.vue";
-import ToolingIcon from "./icons/IconTooling.vue";
-import EcosystemIcon from "./icons/IconEcosystem.vue";
-import CommunityIcon from "./icons/IconCommunity.vue";
-import SupportIcon from "./icons/IconSupport.vue";
-</script>
-
 <template>
-  <h1>Amai... ik krijg nog geld van u!</h1>
+  <h1>Dé eenvoudige manier om geld te vragen van die gierige Nederlanders</h1>
+  <p>
+    Hoe lastig het ook is om van een Hollander geld afhandig te maken, met
+    Klapske is het toch eenvoudiger.
+  </p>
 </template>
