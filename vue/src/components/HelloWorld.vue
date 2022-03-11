@@ -18,6 +18,13 @@ h1 {
   top: -10px;
 }
 
+@media (max-width: 786px) {
+  h1 {
+    font-size: 2rem;
+    line-height: 2.2rem;
+  }
+}
+
 h3 {
   font-size: 1.2rem;
 }
@@ -25,12 +32,5 @@ h3 {
 .greetings h1,
 .greetings h3 {
   text-align: center;
-}
-
-@media (min-width: 1024px) {
-  .greetings h1,
-  .greetings h3 {
-    text-align: left;
-  }
 }
 </style>

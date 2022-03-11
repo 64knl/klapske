@@ -6,12 +6,12 @@ import { defineComponent } from "vue";
 export default defineComponent({
   name: "PayView",
   components: { CurrencyInput, HelloWorld },
-  data: () => ({ amountRequested: 0.0 }),
+  data: () => ({ amountRequested: -1 }),
   mounted() {
     if (this.$route.params.details[0] !== undefined) {
       this.amountRequested = parseInt(this.$route.params.details[0]);
     } else {
-      this.amountRequested = 0;
+      this.amountRequested = 0.0;
     }
   },
 });
@@ -28,14 +28,14 @@ export default defineComponent({
   />
 
   <currency-input
-    v-if="amountRequested"
+    v-if="amountRequested !== -1"
     v-model="amountRequested"
     class="euro"
   />
 
   <nav>
     <a
-      :href="`https://bunq.me/cocaine/${Intl.NumberFormat('us-EN', {
+      :href="`https://bunq.me/cocaine/${Intl.NumberFormat('en-US', {
         maximumFractionDigits: 2,
         minimumFractionDigits: 2,
       })
@@ -48,7 +48,7 @@ export default defineComponent({
     of
     <a
       :href="`https://tikkie.me/pay/Giro555/xmtUk1Zp9iVbkAyFp2Mxzg/${Intl.NumberFormat(
-        'us-EN',
+        'en-US',
         {
           maximumFractionDigits: 2,
           minimumFractionDigits: 2,
@@ -66,13 +66,6 @@ export default defineComponent({
 <style>
 @import "@/assets/base.css";
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  font-weight: normal;
-}
-
 .button {
   border-radius: 2rem;
   padding: 1rem 2rem;
@@ -80,6 +73,14 @@ export default defineComponent({
   font-weight: bold;
   font-size: 1.2rem;
   background-color: white;
+}
+
+@media (max-width: 786px) {
+  .button {
+    font-size: 0.8rem;
+    padding: 0.4rem 1rem;
+    margin: 0.2rem;
+  }
 }
 
 .goodbutton {
@@ -143,7 +144,6 @@ nav a:first-of-type {
   }
 
   nav {
-    text-align: left;
     margin-left: -1rem;
     font-size: 1rem;
 
