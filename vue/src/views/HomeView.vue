@@ -7,3 +7,13 @@ import TheWelcome from "@/components/TheWelcome.vue";
     <TheWelcome />
   </main>
 </template>
+<style scoped>
+main {
+  padding: 2rem;
+}
+@media (min-width: 1024px) {
+  main {
+    padding: 0;
+  }
+}
+</style>

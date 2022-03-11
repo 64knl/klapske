@@ -25,7 +25,7 @@ export default {
 
 .logo {
   display: block;
-  margin: 0 auto 2rem;
+  margin: 0 auto;
 }
 
 a,
@@ -61,11 +61,14 @@ header {
     place-items: flex-start;
     flex-wrap: wrap;
   }
+  .logo {
+    width: 20rem;
+  }
 }
 
 .logo {
   margin: 0 auto;
-  width: 20rem;
+  width: 30rem;
   max-width: 70%;
 }
 </style>

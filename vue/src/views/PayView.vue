@@ -9,7 +9,7 @@ export default defineComponent({
   data: () => ({ amountRequested: -1 }),
   mounted() {
     if (this.$route.params.details[0] !== undefined) {
-      this.amountRequested = parseInt(this.$route.params.details[0]);
+      this.amountRequested = parseFloat(this.$route.params.details[0]);
     } else {
       this.amountRequested = 0.0;
     }
@@ -61,31 +61,38 @@ export default defineComponent({
       >Doneer aan giro 555</a
     >
   </nav>
+  <div class="bc-link">
+    <a
+      :href="`https://bunq.me/cocaine/${Intl.NumberFormat('en-US', {
+        maximumFractionDigits: 2,
+        minimumFractionDigits: 2,
+      })
+        .format(amountRequested)
+        .replace(',', '')}/klapske/bancontact`"
+      v-if="amountRequested >= 5"
+    >
+      <img src="@/assets/bancontact.svg" />
+    </a>
+  </div>
 </template>
 
 <style>
 @import "@/assets/base.css";
 
-.button {
-  border-radius: 2rem;
-  padding: 1rem 2rem;
-  margin: 0 1rem;
-  font-weight: bold;
-  font-size: 1.2rem;
-  background-color: white;
+.bc-link {
+  text-align: center;
+  width: 100%;
+  display: block;
+  padding-top: 1.2rem;
+}
+.bc-link a {
+  display: inline-block;
+  max-width: 4rem;
+  width: 100%;
 }
 
-@media (max-width: 786px) {
-  .button {
-    font-size: 0.8rem;
-    padding: 0.4rem 1rem;
-    margin: 0.2rem;
-  }
-}
-
-.goodbutton {
-  background-color: hsla(160, 100%, 37%, 1);
-  color: white;
+.bc-link a img {
+  width: 100%;
 }
 
 a,
@@ -144,7 +151,6 @@ nav a:first-of-type {
   }
 
   nav {
-    margin-left: -1rem;
     font-size: 1rem;
 
     padding: 1rem 0;
