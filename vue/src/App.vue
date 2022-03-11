@@ -13,7 +13,7 @@ export default {
 
 <template>
   <header>
-    <img alt="Klapske" class="logo" src="@/assets/logo.svg" />
+    <a href="/"><img alt="Klapske" class="logo" src="@/assets/logo.svg" /></a>
   </header>
   <div class="wrapper">
     <RouterView />
