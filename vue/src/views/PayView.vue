@@ -45,21 +45,6 @@ export default defineComponent({
       target="_blank"
       >Betaal direct</a
     >
-    of
-    <a
-      :href="`https://tikkie.me/pay/Giro555/xmtUk1Zp9iVbkAyFp2Mxzg/${Intl.NumberFormat(
-        'en-US',
-        {
-          maximumFractionDigits: 2,
-          minimumFractionDigits: 2,
-        }
-      )
-        .format(amountRequested)
-        .replace(',', '')}`"
-      class="button goodbutton"
-      target="_blank"
-      >Doneer aan giro 555</a
-    >
   </nav>
   <div class="bc-link">
     <a
